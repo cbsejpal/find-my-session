@@ -7,7 +7,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes');
-var users = require('./routes/user');
+
+var mongoose = require('mongoose');
+//mongoDB URL
+var mongoConnectURL = "mongodb://admin:admin123@ds059644.mongolab.com:59644/find-my-session";
+mongoose.connect(mongoConnectURL);
 
 var app = express();
 
@@ -24,7 +28,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(app.router);
 
 app.get('/', routes.index);
-app.get('/users', users.list);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
