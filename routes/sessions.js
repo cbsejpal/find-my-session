@@ -51,10 +51,19 @@ exports.getAllSessions = function(req, res){
             };
         }
         else{
-            json_response = {
-                status: 200,
-                data: docs
-            };
+            if(docs){
+                json_response = {
+                    status: 200,
+                    data: docs
+                };
+            }
+            else{
+                json_response = {
+                    status: 200,
+                    data: "No Sessions found"
+                };
+            }
+
         }
         res.send(json_response);
     });
@@ -73,10 +82,18 @@ exports.getSession = function(req, res){
             };
         }
         else{
-            json_response = {
-                status: 200,
-                data: doc
-            };
+            if(doc){
+                json_response = {
+                    status: 200,
+                    data: doc
+                };
+            }
+            else{
+                json_response = {
+                    status: 200,
+                    data: "No Session found"
+                };
+            }
         }
         res.send(json_response);
     });

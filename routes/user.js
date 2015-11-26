@@ -54,10 +54,19 @@ exports.loginUser = function(req, res){
             };
         }
         else{
-            json_response = {
-                status: 200,
-                data: doc
-            };
+            if(doc){
+                json_response = {
+                    status: 200,
+                    data: doc
+                };
+            }
+            else{
+                json_response = {
+                    status: 200,
+                    data: "No User Found"
+                };
+            }
+
         }
 
         res.send(json_response);
