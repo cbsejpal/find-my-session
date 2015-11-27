@@ -39,6 +39,8 @@ app.get('/getSession', sessions.getSession);
 
 app.post('/registerUser', user.registerUser);
 app.post('/loginUser', user.loginUser);
+app.get('/addAttendees', user.addAttendees);
+app.get('/currentAttendees', user.currentAttendees);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {

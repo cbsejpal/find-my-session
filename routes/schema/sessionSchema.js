@@ -14,8 +14,8 @@ var sessionSchema = new Schema({
     sessionLocation: {type:String, required: true},
     speakerName: {type: String, required: true},
     speakerDetails: {type:String, required: true},
-    attendees: Number,
-    currentlyAttending: Number
+    attendees: {type: Number, default: 0},
+    currentlyAttending: {type: Number, default: 0}
 },{
     versionKey: false
 });

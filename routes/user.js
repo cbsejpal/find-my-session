@@ -1,6 +1,8 @@
 var user = require('./schema/userSchema');
-
 var Users = user.Users;
+
+var session = require('./schema/sessionSchema');
+var Sessions = session.Sessions;
 
 exports.registerUser = function(req, res){
 
@@ -70,5 +72,147 @@ exports.loginUser = function(req, res){
         }
 
         res.send(json_response);
+    });
+};
+
+exports.currentAttendees = function(req, res){
+
+    var sessionId = req.param('sessionId');
+
+    var json_response;
+
+    Sessions.findOne({sessionId: sessionId}, function(err, doc){
+
+        if(err){
+            json_response = {
+                status: 500,
+                data: 'Error in Session Finding'
+            };
+            res.send(json_response);
+        }
+
+        else{
+            if(doc){
+                doc.currentlyAttending = doc.currentlyAttending + 1;
+
+                console.log(doc.currentlyAttending);
+                doc.save(function(err) {
+
+                    if (err) {
+                        json_response = {
+                            status: 500,
+                            data: 'Error in doc saving'
+                        };
+                        res.send(json_response);
+                    } else {
+                        json_response = {
+                            status: 200,
+                            data: 'Success'
+                        };
+                        res.send(json_response);
+                    }
+                });
+            }
+            else{
+                json_response = {
+                    status: 200,
+                    data: 'No Session Found'
+                };
+                res.send(json_response);
+            }
+        }
+    });
+};
+
+exports.addAttendees = function(req, res){
+
+    var sessionId = req.param('sessionId');
+
+    var userId = req.param('userId');
+
+    var json_response;
+
+    var sessionName;
+
+    Sessions.findOne({sessionId: sessionId}, function(err, session) {
+        if(err){
+            json_response = {
+                status: 500,
+                data: 'Error in Session Finding'
+            };
+            res.send(json_response);
+        }
+        else{
+            if(session){
+
+                session.attendees = session.attendees + 1;
+                sessionName = session.sessionName;
+
+                console.log("attendees " + session.attendees);
+                console.log("session name " + sessionName);
+
+                session.save(function(err){
+
+                    if(err){
+                        json_response = {
+                            status: 500,
+                            data: 'Error in Session doc saving'
+                        };
+                        res.send(json_response);
+                    }
+                    else{
+
+                        Users.findOne({email: userId}, function (err, doc) {
+                            if(err){
+                                json_response = {
+                                    status: 500,
+                                    data: 'Error in User Finding'
+                                };
+                                res.send(json_response);
+                            }
+                            else{
+                                if(doc){
+                                    doc.sessionsAttending.push({
+                                        sessionId: sessionId,
+                                        sessionName: sessionName
+                                    });
+                                    doc.save(function(err){
+                                        if(err){
+                                            json_response = {
+                                                status: 500,
+                                                data: 'Error in User doc saving'
+                                            };
+                                            res.send(json_response);
+                                        }
+                                        else{
+                                            json_response = {
+                                                status: 200,
+                                                data: 'Success'
+                                            };
+                                            res.send(json_response);
+                                        }
+                                    });
+                                }
+                                else{
+                                    json_response = {
+                                        status: 200,
+                                        data: 'No User Found'
+                                    };
+                                    res.send(json_response);
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+            else{
+                json_response = {
+                    status: 200,
+                    data: 'No Session Found'
+                };
+                res.send(json_response);
+            }
+        }
+
     });
 };
