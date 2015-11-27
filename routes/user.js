@@ -4,6 +4,22 @@ var Users = user.Users;
 var session = require('./schema/sessionSchema');
 var Sessions = session.Sessions;
 
+
+exports.register = function (req, res)
+{
+
+	res.render('signup');
+
+}
+
+exports.login = function (req, res)
+{
+
+	res.render('login');
+
+}
+
+
 exports.registerUser = function(req, res){
 
     var fullName = req.param('fullName');
