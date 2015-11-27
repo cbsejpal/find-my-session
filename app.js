@@ -37,7 +37,9 @@ app.post('/addSession', sessions.addSession);
 app.get('/getAllSessions', sessions.getAllSessions);
 app.get('/getSession', sessions.getSession);
 
+app.get('/registerUser',user.register);
 app.post('/registerUser', user.registerUser);
+app.get('/loginUser',user.login);
 app.post('/loginUser', user.loginUser);
 app.get('/addAttendees', user.addAttendees);
 app.get('/currentAttendees', user.currentAttendees);
@@ -74,6 +76,6 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-/*http.createServer(app).listen(app.get('port'), function() {
+http.createServer(app).listen(app.get('port'), function() {
     console.log('Express server listening on port ' + app.get('port'));
-});*/
+});
