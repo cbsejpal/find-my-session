@@ -38,9 +38,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 text">
-                            <h1><strong>Please</strong> Signup here</h1>
+                            <h1 style="text-align:center"><strong>Please</strong> Signup here</h1>
                             <div class="description">
-                            	<p>
+                            	<p style="text-align:center">
                             	Please signup to use the service ! 
                             	</p>
                             </div>
@@ -60,17 +60,16 @@
                             <div class="form-bottom">
 			                    <form role="form" method="post" name="registration" class="login-form">
 			                    	<div class="form-group">
-			                    		<label class="sr-only" for="form-fullName">fullName</label>
-			                        	<input type="text" name="form-fullName" ng-model="fullName" placeholder="Fullname" class="form-fullName form-control" id="form-fullName">
+			                    	
+			                        	<input type="text" name="fullName" ng-model="fullName" placeholder="Fullname" id="fullName" required>
 						                      
 						                        <span style="color:red" ng-show="registration.fullName.$dirty && registration.fullName.$invalid">
-			  											<span ng-show="registration.fullName.$error.required">City is required.</span>
+			  											<span ng-show="registration.fullName.$error.required">Fullname is required.</span>
 			  									</span>	
 				
 			                        </div>
 			                         <div class="form-group">
-			                        	<label class="sr-only" for="form-email">email</label>
-			                        	<input type="text" name="form-email" ng-model="email" placeholder="email" class="form-email form-control" id="form-email">
+			                        	<input type="text" name="email" ng-model="email" placeholder="email"  id="email"  required>
 			                       
 						                    <span style="color:red" ng-show="registration.email.$dirty && registration.email.$invalid">
 			  										<span ng-show="registration.email.$error.required">Email is required.</span>
@@ -81,8 +80,8 @@
 			                        </div>
 			                        
 			                        <div class="form-group">
-			                        	<label class="sr-only" for="form-password">Password</label>
-			                        	<input type="password" ng-model="password" name="form-password" placeholder="password" class="form-password form-control" id="form-password">
+			                        
+			                        	<input type="password" ng-model="password" name="password" placeholder="password"  id="password" required>
 			                         
 			                         		<span style="color:red" ng-show="registration.password.$dirty && registration.password.$invalid">
 			  										<span ng-show="registration.password.$error.required">Password is required.</span>
@@ -91,8 +90,8 @@
 			                        
 			                        </div>
 			                        <div class="form-group">
-			                    		<label class="sr-only" for="form-linkedInUrl">linkedInUrl</label>
-			                        	<input type="text" ng-model="linkedInUrl" name="form-linkedInUrl" placeholder="linkedInUrl" class="form-linkedInUrl form-control" id="form-linkedInUrl">
+			                   
+			                        	<input type="text" ng-model = "linkedInUrl" name="linkedInUrl" placeholder="linkedInUrl" id="linkedInUrl" required>
 			                        
 			                         		<span style="color:red" ng-show="registration.linkedInUrl.$dirty && registration.linkedInUrl.$invalid">
 			  										<span ng-show="registration.linkedInUrl.$error.required">Url is required.</span>
@@ -100,10 +99,10 @@
 			                        
 			                        </div>
 			                        <div class="form-group">
-			                    		<label class="sr-only" for="form-contactNumber">contactNumber</label>
-			                        	<input type="text" ng-model = "contactNumber" name="form-contactNumber" placeholder="contactNumber" class="form-contactNumber form-control" id="form-contactNumber">
-			                        	 <span style="color:red" ng-show="registration.contactNumber.$dirty && registration.contactNumber.$invalid">
-			  										<span ng-show="registration.contactNumber.$error.required">Contact is required.</span>
+			                        	<input type="text" ng-model = "contactNumber" name="contactNumber" placeholder="contactNumber" required>
+			                        	
+			                        	<span style="color:red" ng-show="registration.contactNumber.$dirty && registration.contactNumber.$invalid">
+			  										<span ng-show="registration.contactNumber.$error.required">Contact Number is required.</span>
 			  								</span>	
 			                        
 			                        </div>

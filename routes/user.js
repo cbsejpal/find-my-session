@@ -25,7 +25,7 @@ exports.registerUser = function(req, res){
     var fullName = req.param('fullName');
     var email = req.param('email');
     var password =req.param('password') ;
-    var linkedInURL = req.param('linkedInURL');
+    var linkedInURL= req.param('linkedInUrl');
     var contactNumber =  req.param('contactNumber');
 
 
@@ -37,11 +37,13 @@ exports.registerUser = function(req, res){
         contactNumber: contactNumber
     });
 
+    console.log("new User : "+newUser.linkedInUrl);
     var json_response;
 
     newUser.save(function(err){
 
         if(err){
+        	console.log(err);
             json_response = {
                 status: 500,
                 data: 'error'
@@ -59,13 +61,23 @@ exports.registerUser = function(req, res){
 
 };
 
+exports.userProfile = function (req, res){
+	console.log("in the function");
+	
+	res.render('userProfile');
+	
+	}
+
 exports.loginUser = function(req, res){
 
     var email = req.param('email');
     var password=  req.param('password');
+    	
+    console.log(email);
 
     Users.findOne({email: email, password:password}, function(err,doc){
         if(err){
+        	console.log(err);
             json_response = {
                 status: 500,
                 data: 'error'
@@ -77,10 +89,12 @@ exports.loginUser = function(req, res){
                     status: 200,
                     data: doc
                 };
+                
             }
             else{
                 json_response = {
-                    status: 200,
+                		
+                    status: 300,
                     data: "No User Found"
                 };
             }
