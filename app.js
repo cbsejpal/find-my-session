@@ -35,14 +35,19 @@ app.use(app.router);
 app.get('/', routes.index);
 app.post('/addSession', sessions.addSession);
 app.get('/getAllSessions', sessions.getAllSessions);
+
 app.get('/getSession', sessions.getSession);
+
+app.get('/sessionDetails',sessions.sessionDetails);
 
 app.get('/registerUser',user.register);
 app.post('/registerUser', user.registerUser);
 app.get('/loginUser',user.login);
 app.post('/loginUser', user.loginUser);
+app.get('/userProfile',user.userProfile);
 app.get('/addAttendees', user.addAttendees);
 app.get('/currentAttendees', user.currentAttendees);
+
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {

@@ -10,20 +10,23 @@ app.controller('signup', function($scope, $http) {
 		    field.$setDirty();
 		});
 		if($scope.registration.$error.required){
+			//alert("You must enter your details");
 			$event.preventDefault();
 		}
 		else{
+			//alert($scope.linkedInUrl);
 			$http({
 				method : "POST",
 				url : '/registerUser',
 				data : {
+					
 						"fullName" : $scope.fullName,
 						"email" : $scope.email,
 						"password" : $scope.password,				 
 				       
 				        "linkedInUrl" : $scope.linkedInUrl,
 				       
-				        "phoneNumber" : $scope.phoneNumber
+				        "contactNumber" : $scope.contactNumber
 				       
 					
 				}
@@ -31,11 +34,12 @@ app.controller('signup', function($scope, $http) {
 				alert(data.status);
 				//checking the response data for statusCode
 				if (data.status == 500) {
-		
+					
+					alert("in 500");
 					$scope.error = "something is wrong";			
 					}
 				else{
-					
+				//	alert("200");
 					//Making a get call to the '/redirectToHomepage' API
 					window.location.assign("/loginUser");
 				}

@@ -2,6 +2,11 @@ var session = require('./schema/sessionSchema');
 
 var Sessions = session.Sessions;
 
+exports.sessionDetails = function (req, res){
+	
+	res.render('sessionDetails');
+}
+
 exports.addSession = function(req, res){
 
     var sessionName = req.param('sessionName');
@@ -75,7 +80,10 @@ exports.getSession = function(req, res){
 
     Sessions.findOne({sessionId: sessionId}, function(err,doc){
 
+    	console.log("outside doc");
         if(err){
+
+        	console.log("error");
             json_response = {
                 status: 500,
                 data: 'error'
@@ -83,18 +91,17 @@ exports.getSession = function(req, res){
         }
         else{
             if(doc){
-                json_response = {
-                    status: 200,
-                    data: doc
-                };
+            	console.log("inside doc");
+            	res.redirect('/sessionDetails');
+                
             }
             else{
                 json_response = {
-                    status: 200,
+                    status: 300,
                     data: "No Session found"
                 };
             }
         }
-        res.send(json_response);
+      
     });
 };
