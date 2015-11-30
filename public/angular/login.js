@@ -37,4 +37,4 @@ app.controller('login', function($scope, $http) {
 			$scope.invalid_login = true;
 		});
 	};
-})
+});
