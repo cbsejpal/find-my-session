@@ -21,6 +21,8 @@ exports.login = function (req, res)
 
 
 exports.registerUser = function(req, res){
+	
+	
 
     var fullName = req.param('fullName');
     var email = req.param('email');
@@ -62,10 +64,15 @@ exports.registerUser = function(req, res){
 };
 
 exports.userProfile = function (req, res){
-	console.log("in the function");
-	
-	res.render('userProfile');
-	
+	console.log(req.session.userId);
+	  if(req.session.userId){
+	        res.header('Cache-Control','no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
+	        res.render('userProfile');
+	    }
+	    else{
+	        res.redirect('/');
+	    }
+	//res.render('userProfile');
 	}
 
 exports.loginUser = function(req, res){
@@ -73,7 +80,6 @@ exports.loginUser = function(req, res){
     var email = req.param('email');
     var password=  req.param('password');
     	
-    console.log(email);
 
     Users.findOne({email: email, password:password}, function(err,doc){
         if(err){
@@ -85,6 +91,8 @@ exports.loginUser = function(req, res){
         }
         else{
             if(doc){
+            	console.log(doc.email);
+            	req.session.userId = doc.email;
                 json_response = {
                     status: 200,
                     data: doc
@@ -158,7 +166,7 @@ exports.addAttendees = function(req, res){
 
     var sessionId = req.param('sessionId');
 
-    var userId = req.param('userId');
+    var userId = req.session.userId;
 
     var json_response;
 
@@ -246,3 +254,11 @@ exports.addAttendees = function(req, res){
 
     });
 };
+
+
+exports.logout = function(req, res)
+{
+	//req.session.destroy();
+	res.redirect('/');
+
+}

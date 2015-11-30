@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Admin</title>
+      <style>
+   body  {
+    background-image: url("img/backgrounds/4.jpg");
+    background-color: #cccccc;
+}
+
+</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://code.angularjs.org/1.3.15/angular.js"></script>
+  
+    	<link rel="stylesheet" href="stylesheets/form-elements.css">
+        <link rel="stylesheet" href="stylesheets/style.css">
+        <script src="angular/addSession.js"></script>
+  
+</head>
+<body ng-app="addSession" ng-controller="addSession">
+
+<div class="container">
+<div class="col-md-12">
+
+<div class="col-md-3"></div>
+<div class="col-md-6">
+  <center><h2>ADD SESSION</h2></center>
+  <p></p>
+  </div>
+  <div class="col-md-3"></div>
+  </div>
+  
+  
+  
+  <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                        	<div class="form-top">
+                        		<div class="form-top-left">
+                        			<p>Add the session name, speaker of the session and the details for the session! !</p>
+                            	
+                        		</div>
+                        		<div class="form-top-right">
+                        			<i class="fa fa-key"></i>
+                        		</div>
+                            </div>
+                            <div class="form-bottom">
+			                    <form role="form" name="registration" class="login-form">
+			                    	<div class="form-group">
+			                    	 <label for="sessionName">Session name:</label>
+     									 <input type="text" ng-model="sessionName" class="form-control" id="sessionName" name="sessionName" required>
+     									 </div>
+			                    	
+			                        	<div class="form-group">
+										      <label for="sessionDesc">Session Description :</label>
+										        <textarea ng-model="sessionDesc" class="form-control" rows="5" id="sessionDesc" name="sessionDesc" required></textarea>
+										    </div>
+						         
+			                        <div class="form-group">
+			                        
+			                        	 <div class="col-md-6">
+										    <div class="form-group">
+										    
+										      <label for="">Session timings:</label>
+										      <input ng-model="sessionTimings" type="text" class="form-control" id="sessionTimings" name="sessionTimings" required>
+										    </div>
+										    </div>
+										    <div class="col-md-6">
+										    <div class="form-group">
+										    
+										      <label for="">Session Location:</label>
+										      <input ng-model="sessionLocation" type="text" class="form-control" id="sessionLocation" name="sessionLocation" required>
+										    </div>
+										    </div>
+													                        
+			                        </div>
+			                      
+			                   
+			                        	    <div class="form-group">
+    
+											      <label for="">Speaker Name:</label>
+											      <input ng-model="speakerName" type="text" class="form-control" id="speakerName" name="speakerName" required>
+											    </div>
+											     <div class="form-group">
+											    
+											      <label for="">Speaker Details:</label>
+											      <input type="text" ng-model="speakerDetails" class="form-control" id="speakerDetails" name="speakerDetails" required>
+											    </div>
+											    
+														                        
+			                       		
+			                        
+			                        <button type="submit" ng-click="submit()" class="btn">Create Session!</button>
+			                    </form>
+		                    </div>
+  
+  
+  </div>
+  
+    
+ 
+ </div>
+</div>
+
+</body>
+</html>

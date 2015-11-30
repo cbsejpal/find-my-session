@@ -11,25 +11,19 @@ app.controller('sessions', function($scope, $http) {
 		}
 		else
 			{
-			alert(response.status);
+			
 				$scope.sessions = "";
 			}
 	});
 	
 	
 	$scope.getSession = function(session){
-		alert(session.sessionId);
 		
-		$http({
-			method : "GET",
-			url : '/getSession',
-			params : {
-				"sessionId" : session.sessionId
-				}
-		});
+		window.location.assign("/sessionDetails?sessionId="+session.sessionId);
+		
 	}
+	
 			
 		
 });		
-	
-	
+

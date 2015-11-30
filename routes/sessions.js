@@ -3,9 +3,10 @@ var session = require('./schema/sessionSchema');
 var Sessions = session.Sessions;
 
 exports.sessionDetails = function (req, res){
-	
-	res.render('sessionDetails');
+	var sessionId = req.param("sessionId");
+	res.render('displayUserSessions',{sessionId : sessionId});
 }
+
 
 exports.addSession = function(req, res){
 
@@ -25,6 +26,7 @@ exports.addSession = function(req, res){
         speakerDetails: speakerDetails
     });
 
+    console.log(newSession);
     var json_response;
 
     newSession.save(function(err){
@@ -41,6 +43,7 @@ exports.addSession = function(req, res){
             };
         }
 
+    	console.log(json_response);
         res.send(json_response);
     });
 };
@@ -91,9 +94,10 @@ exports.getSession = function(req, res){
         }
         else{
             if(doc){
-            	console.log("inside doc");
-            	res.redirect('/sessionDetails');
-                
+                json_response = {
+                        status: 200,
+                        data: doc
+                    };
             }
             else{
                 json_response = {
@@ -102,6 +106,6 @@ exports.getSession = function(req, res){
                 };
             }
         }
-      
+      res.send(json_response);
     });
 };
