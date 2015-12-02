@@ -81,19 +81,14 @@
             <div class="col-md-12">
              <div class="col-md-6" ng-repeat = "k in sessions">
           
-            <div class="row">
-            <div class="col-md-4">
-                <h3>Session : </h3></div>
-              
-                <div class="col-md-8">
-                <input type = "text" class="form-control" ng-model="k.sessionName"></input></div>
-               </div>
+          
                 
-                
+                 Session :<input type = "text" class="form-control" ng-model="k.sessionName"></input>
                 Speaker :<input type="text" class="form-control" ng-model ="k.speakerName">
                 Timing : <input type="text" class="form-control" ng-model="k.sessionTimings">
                  Location : <input type="text" class="form-control" ng-model="k.sessionLocation">
-                Description : <input type="text" class="form-control" ng-model="k.sessionDesc">
+                Description : <input type="text" class="form-control" maxlength="2" ng-model="k.sessionDesc"><br>
+                <button class="btn btn-success" ng-click = save()>Save</button>
              
                 <hr>
                 </div>

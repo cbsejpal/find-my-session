@@ -24,6 +24,9 @@ app.controller('adminLogin', function($scope, $http) {
 				$scope.invalid = true;
 
 			}
+			else{
+				window.location.assign('/adminDashboard');
+			}
 	});
 	
 }
