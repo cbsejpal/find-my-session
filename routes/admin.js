@@ -21,14 +21,16 @@ exports.adminLogin = function(req, res){
     var password =  req.param('password');
     console.log(email+" "+password);
     var json_response;
-    if("soham" == "soham"){
-    	console.log("soham");
-    }
+ 
     
     if(email == "admin@admin.com" && password == "admin@admin.com"){
 
     	req.session.adminId = email;
-    	res.render('adminDashboard');
+    	 json_response = {
+                 status: 200,
+                 data: 'successful'
+             };
+    	res.send(json_response);
     }
     else{
     	

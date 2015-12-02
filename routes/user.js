@@ -12,6 +12,11 @@ exports.register = function (req, res)
 
 }
 
+
+exports.about = function (req, res){
+	
+	res.render('about');
+}
 exports.login = function (req, res)
 {
 

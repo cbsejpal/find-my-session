@@ -66,6 +66,7 @@ app.get('/addAttendees', user.addAttendees);
 app.get('/currentAttendees', user.currentAttendees);
 app.get('/adminDashboard',admin.adminDashboard);
 app.get('/logout',user.logout);
+app.get('/about',user.about);
 
 
 app.get('/adminLogin',admin.login);
