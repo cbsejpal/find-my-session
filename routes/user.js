@@ -263,7 +263,7 @@ exports.addAttendees = function(req, res){
 
 exports.logout = function(req, res)
 {
-	//req.session.destroy();
+	req.session.destroy();
 	res.redirect('/');
 
 }
