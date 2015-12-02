@@ -17,8 +17,8 @@ var mongoStore = require("connect-mongo")(expressSession);
 
 var mongoose = require('mongoose');
 //mongoDB URL
-var mongoConnectURL = "mongodb://admin:admin123@ds059644.mongolab.com:59644/find-my-session";
-var mongoSessionConnectURL = "mongodb://admin:admin123@ds059644.mongolab.com:59694/sessions";
+var mongoConnectURL = "mongodb://myAdmin123:myAdmin123@c280.alcatraz.0.mongolayer.com:10280/find-my-session";
+var mongoSessionConnectURL = "mongodb://myAdmin123:myAdmin123@c280.alcatraz.0.mongolayer.com:10280/sessions";
 mongoose.connect(mongoConnectURL);
 
 console.log("connected");
