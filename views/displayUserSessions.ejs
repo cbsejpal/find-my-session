@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Modern Business - Start Bootstrap Template</title>
+    <title>User</title>
 
    
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -31,7 +31,9 @@
  <div class="container">
         <!-- Intro Content -->
         <div class="row">
+        
          <div class="col-lg-12">
+         <a href = "logout" style= "float:right;">Logout</a>
                 <h2 class="page-header">SESSION DETAILS: </h2>
                 
             </div>
@@ -49,7 +51,7 @@
                 </div>
                 <div class="row">
                 <div class="col-md-6">
-                <div class="col-md-4"><button id ="btn" ng-model="buttonSuccess" style="float:center;" ng-click="interested(<%= sessionId %>)" class="btn btn-default">Interested</button> </div><div class="col-md-4"> <p ng-model="attendees">  Attending = {{attendees}} </p></div> <div class="col-md-4"><p ng-model="currentlyAttending">Curruntly Attending = {{currentlyAttending}}</p></div>
+                <div class="col-md-4"><button id ="btn" ng-model="buttonSuccess" style="float:center;" ng-click="interested(<%= sessionId %>)" class="btn btn-default">Interested</button> </div><div class="col-md-4"> <p ng-model="attendees">  Attending = {{attendees}} </p></div> 
              </div></div>
              
         </div>
