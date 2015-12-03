@@ -26,8 +26,8 @@ exports.login = function (req, res)
 
 
 exports.registerUser = function(req, res){
-	
-	
+
+
 
     var fullName = req.param('fullName');
     var email = req.param('email');
