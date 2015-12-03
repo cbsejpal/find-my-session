@@ -2,7 +2,7 @@
 var app = angular.module('adminLogin', []);
 
 app.controller('adminLogin', function($scope, $http) {
-	
+	$scope.invalid = true;
 	
 	$scope.submit = function() {
 		
@@ -21,7 +21,7 @@ app.controller('adminLogin', function($scope, $http) {
 			
 				//$scope.invalid_login = true;
 				//alert("invalid");
-				$scope.invalid = true;
+				$scope.invalid = false;
 
 			}
 			else{

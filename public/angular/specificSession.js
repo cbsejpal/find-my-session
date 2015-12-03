@@ -20,7 +20,7 @@ app.controller('sessions', function($scope, $http) {
 				document.getElementById("btn").className = "btn btn-success";
 				$scope.buttonSuccess  = document.getElementById("btn").className;
 
-				$scope.getSession = function(sessionId){
+				
 				
 					$http({
 						method : "GET",
@@ -31,18 +31,19 @@ app.controller('sessions', function($scope, $http) {
 					}).success(function(response) {
 					
 						if (response.status == 200) {
-							
+						
 							$scope.attendees = response.data.attendees;	
 							$scope.currentlyAttending = response.data.currentlyAttending;
 						
 							}
 						else
 							{
-							
+								alert("error");
+								
 							}
-					});
-				}
+					}).error(function(response){alert("error")});
 			}
+			
 				
 		else{
 				
