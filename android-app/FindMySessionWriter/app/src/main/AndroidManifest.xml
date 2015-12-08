@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.project"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.NFC" />
+    <!--
+     If the next instruction is omitted, anybody could download the app from the market 
+     regardless that is not a NFC compatible device
+    -->
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <supports-screens
+        android:largeScreens="false"
+        android:normalScreens="true"
+        android:smallScreens="false"
+        android:xlargeScreens="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon_v1"
+        android:label="@string/app_name"
+        android:logo="@drawable/app_icon_v1"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.project.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.project.ReadMain"
+            android:label="@string/title_activity_read_main"
+            android:screenOrientation="portrait" >
+
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_list" />
+        </activity>
+        <activity
+            android:name="com.example.project.WriteMain"
+            android:label="@string/title_activity_write_main"
+            android:screenOrientation="portrait" >
+
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_list" />
+        </activity>
+        <activity
+            android:name="com.example.project.CreateTagContent"
+            android:label="@string/title_activity_create_tag_content"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_list" />
+        </activity>
+        <activity
+            android:name="com.example.project.TransferContent"
+            android:label="@string/title_activity_transfer_content"
+            android:screenOrientation="portrait" >
+
+        </activity>
+        <activity
+            android:name="com.example.project.TagsMain"
+            android:label="@string/title_activity_tags_main"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+        </activity>
+        <activity
+            android:name="com.example.project.SaveResult"
+            android:label="@string/title_activity_save_result"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.project.ExtrasMain"
+            android:label="@string/title_activity_extras_main"
+            android:screenOrientation="portrait" >
+
+        </activity>
+        <activity
+            android:name="com.example.project.EraseTag"
+            android:label="@string/title_activity_erase_tag"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.project.ReadTEG"
+            android:label="@string/title_activity_read_teg"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="ext"
+                    android:pathPrefix="/com.example:thesis"
+                    android:scheme="vnd.android.nfc" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.project.GenerateQRCodeActivity"
+            android:label="@string/title_activity_generate_qrcode"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.google.zxing.client.android.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.example.project.BackupData"
+            android:label="@string/title_activity_backup_data"
+            android:screenOrientation="portrait" >
+
+        </activity>
+        <activity
+            android:name="com.example.project.RestoreData"
+            android:label="@string/title_activity_restore_data"
+            android:screenOrientation="portrait" >
+
+        </activity>
+        <activity
+            android:name="com.example.project.RestoreResults"
+            android:label="@string/title_activity_restore_results"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.project.AccidentAssistance"
+            android:label="@string/title_activity_accident_assistance"
+            android:screenOrientation="portrait"
+             >
+        </activity>
+    </application>
+
+</manifest>

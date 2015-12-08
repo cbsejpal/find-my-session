@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Commons Strings -->
+    <string name="app_name">tagR</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="action_about">Acerca</string>
+    <string name="saveButton">Guardar</string>
+    <string name="saveButton2">Guardar todos</string>
+    <string name="launchButton">Ejecutar</string>
+    <string name="affirmation">Si</string>
+    <string name="accept">Aceptar</string>
+    <string name="negation">No</string>
+    <string name="emptyList">No hay elementos</string>
+    <string name="options">Opciones</string>
+    <string name="fupdate">Actualizar</string>
+    <string name="fwrite">Escribir</string>
+    <string name="share">Compartir</string>
+
+    <!-- Main activity strings -->
+    <string name="read">Leer etiqueta</string>
+    <string name="write">Escribir etiqueta</string>
+    <string name="my_tags">Mis contenidos</string>
+    <string name="extras">Extras</string>
+
+    <!-- Read(Main) activity strings -->
+    <string name="title_activity_read_main">Leer etiqueta</string>
+    <string name="readIntenta">"Listo para leer el contenido"</string>
+    <string name="readIntentb">"La lectura comenzará al acercar un elemento NFC compatible a la parte posterior de su dispositivo"</string>
+    <string name="readIntentc">"Acerque una etiqueta NFC "</string>
+    <string name="cntnt_desc_tagread">"Etiqueta y lupa"</string>
+    <string name="title_feature_list">"Características de la etiqueta"</string>
+    <string name="cntnt_desc_tagicon">"Icono del contenido"</string>
+    <string name="readIntent_Empty">"Etiqueta vacia"</string>
+
+    <!-- Write(Main) activity strings -->
+    <string name="title_activity_write_main">Escribir etiqueta</string>
+    <string name="title_recent_content">Contenido reciente</string>
+    <string name="newContentButton">Crear nuevo contenido</string>
+    <string name="showMoreButton">Mostrar más</string>
+    <string name="writeDialogTop">Listo para almacenar el contenido seleccionado</string>
+    <string name="writeDialogBottom">La escritura comenzará al acercar un elemento NFC compatible a la parte posterior de su dispositivo</string>
+
+    <!-- Tag features Strings -->
+    <string name="f_SerialNumber">Número de serie</string>
+    <string name="f_DataFormat">Clasificación del NFC Forum</string>
+    <string name="f_CBMRO">¿Puede ser de Sólo Lectura?</string>
+    <string name="f_Storage">Almacenamiento</string>
+    <string name="f_WRTBL">¿Puede ser sobrescrita?</string>
+    <string name="f_TechList">Tecnologías soportadas</string>
+    <string name="f_Storage_T">Total</string>
+    <string name="f_Storage_F">Libre</string>
+
+    <!-- Tag Records Strings -->
+    <string name="title_record_list">Lista de registros</string>
+    <string name="r_number"><b>Registro #</b></string>
+    <string name="r_TNF">TNF:</string>
+    <string name="r_Type">Tipo de registro:</string>
+    <string name="r_Protocol">Protocolo:</string>
+    <string name="r_Payload">Contenido:</string>
+
+    <!-- CreateTagContent (Main) activity strings -->
+    <string name="title_activity_create_tag_content">Crear nuevo contenido</string>
+    <string name="wSaveWriteButton">Guardar y escribir</string>
+    <string name="wSelectorText">Seleccione el tipo de contenido que desea crear</string>
+    <string name="plEmpty">Lista de números vacía</string>
+    <string name="plNumber">Ha seleccionado a: \u00A0</string>
+    <string name="messageSize">Tamaño del mensaje:  \u00A0</string>
+    <string name="selector">Tipo de contenido</string>
+
+    <!-- TransferContent(Main) activity strings -->
+    <string name="title_activity_transfer_content">Transferencia</string>
+    <string name="doneButton">Listo</string>
+    <string name="previousText">Contenido previo</string>
+    <string name="currentText">Contenido actual</string>
+    <string name="validateForm">Por favor, complete todos los campos</string>
+
+    <!-- URI/URL protocol Strings -->
+    <string-array name="protocols_array">
+        <item>http://</item>
+        <item>https://</item>
+        <item>http://www.</item>
+        <item>https://www.</item>
+        <item>ftp://</item>
+        <item>sftp://</item>
+        <item>file://</item>
+        <item>telnet://</item>
+    </string-array>
+
+    <!-- Tags (Main) activity strings -->
+    <string name="title_activity_tags_main">Mis contenidos</string>
+    <string name="filterButton">Filtrar</string>
+    <string name="title_filterLabelOn">Filtrado por etiqueta</string>
+    <string name="title_filterLabelOff">Filtar por etiqueta</string>
+    <string name="title_filterTypeOn">Filtrar por tipo</string>
+    <string name="title_filterTypeOff">Filtrado por tipo</string>
+    <string name="removeFilterButton">Remover filtro</string>
+    <string name="filterBy">Filtrado por: \u00A0</string>
+    <string name="filterByL">Etiqueta(s): \u00A0</string>
+    <string name="filterByT">Tipo(s): \u00A0</string>
+    <string name="dialogAddLabel">Agregar etiqueta:</string>
+
+    <!-- Search widget strings -->
+    <string name="search_hint">Contenido de la etiqueta</string>
+    <string name="search_label">Buscar</string>
+
+    <!-- String arrays -->
+    <string-array name="cOptions_array">
+        <item>Eliminar</item>
+        <item>Compartir</item>
+        <item>Etiquetar</item>
+        <item>Generar código QR</item>
+    </string-array>
+    <string-array name="kinds_array">
+        <item>@string/link</item>
+        <item>@string/mail</item>
+        <item>@string/sms</item>
+        <item>@string/tel</item>
+        <item>@string/geoLoc</item>
+        <item>@string/plainText</item>
+        <item>@string/thesis</item>
+        <item>@string/report</item>
+    </string-array>
+    <string-array name="tOptions_array">
+        <item>Editar</item>
+        <item>Eliminar</item>
+    </string-array>
+
+    <!-- SavedContent activity strings -->
+    <string name="title_activity_save_result">Contenido guardado</string>
+    <string name="resultLabel">Resultado </string>
+    <string name="resultText">El contenido ha sido guardado.</string>
+    <string name="resultTextA">El contenido ya existe.</string>
+    <string name="resultTextB">El contenido ya existe. No se han guardado nuevos registros.</string>
+    <string name="savedContentLabel">Contenido guardado</string>
+
+    <!-- GPSTracker Alter Dialog strings -->
+    <string name="dialogTitle">Configuración de GPS</string>
+    <string name="dialogMessage">El GPS no está activado. ¿Desea ir al menú de Ajustes?</string>
+    <string name="dialogOkButton">Ajustes</string>
+    <string name="dialogCancelButton">Cancelar</string>
+
+     <!-- Nfc Alert  Dialog strings -->
+    <string name="dialogNTitle">Configuraciones NFC</string>
+    <string name="dialogNMessage">NFC está deshabilitado. ¿Desea ir al menú de Ajustes?</string>
+
+    <!-- Network Alert Dialog strings -->
+    <string name="dialogMTitle">Configuraciones de Red</string>
+    <string name="dialogMMessage">Es necesario estar conectado a la red. ¿Desea ir al menú de Ajustes?</string>
+    
+    
+    <!-- Forms string -->
+
+
+    <!-- Geo Location strings -->
+    <string name="latitudeLabel">Latitud</string>
+    <string name="latitudeHint">Latitud</string>
+    <string name="longitudeLabel">Longitud</string>
+    <string name="longitudeHint">Longitud</string>
+    <string name="locationButton">Ubicación actual</string>
+
+    <!-- Link strings -->
+    <string name="linkHint">URI/URL</string>
+    <string name="linkLabel">Escriba el URI/URL</string>
+
+    <!-- Mail strings -->
+    <string name="mailLabel">Correo del destinatario</string>
+    <string name="mailHint">Destinatario</string>
+    <string name="bodyLabel">Mensaje del correo</string>
+    <string name="bodyHint">Mensaje</string>
+    <string name="subjectLabel">Asunto del correo</string>
+    <string name="subjectHint">Asunto</string>
+
+    <!-- SMS strings -->
+    <string name="receiverLabel">Número de teléfono</string>
+    <string name="receiverHint">Escriba el número</string>
+    <string name="messageLabel">Mensaje</string>
+    <string name="messageHint">Escriba el mensaje</string>
+
+    <!-- Telephone Number strings -->
+    <string name="phoneLabel">Número de teléfono</string>
+    <string name="phoneHint">Escriba el número</string>
+
+    <!-- Plain text strings -->
+    <string name="textLabel">Texto plano</string>
+    <string name="textHint">Escriba el texto</string>
+
+    <!-- Accident Report Strings -->
+    <string name="policyLabel">Número de póliza </string>
+    <string name="policyField">Escriba el número de póliza</string>
+    <string name="plateLabel">Número de placa</string>
+    <string name="plateField">Escriba el número de placa</string>
+
+    <!-- Create TEG strings -->
+    <string name="ct_title">Título del Trabajo Especial de Grado</string>
+    <string name="ct_titleH">Escriba el título</string>
+    <string name="ct_author">Autor(es)</string>
+    <string name="ct_authorH">X. XXXXX, X. XXXXX </string>
+    <string name="ct_tutor">Tutor(es)</string>
+    <string name="ct_tutorH">X. XXXXX, X. XXXXX</string>
+    <string name="ct_school">Escuela</string>
+    <string name="ct_schoolH">Computación</string>
+    <string name="ct_year">Año</string>
+    <string name="ct_yearH">2015</string>
+    <string name="ct_url">URL</string>
+    <string name="ct_urlH">Escriba la dirección</string>
+    <string name="ct_Surl">Acortar URL</string>
+
+    <!-- Extras (Main) activity string -->
+    <string name="title_activity_extras_main">Extras</string>
+    <string name="backUpButton">Respaldar datos</string>
+    <string name="restoreButton">Restaurar datos</string>
+
+    <!-- Erease Tag strings -->
+    <string name="title_activity_erase_tag">Borrar etiqueta</string>
+    <string name="eraseButton">Borrar etiqueta</string>
+    <string name="ereaseResult">Borrado exitoso</string>
+    <string name="ereaseResultB">Borrado fallido</string>
+    <string name="ed_title">Listo para borrar el contenido</string>
+    <string name="ed_subtitle">El borrado tardará unos segundos y comenzará al acercar un elemento NFC compatible a la parte posterior de su dispositivo.</string>
+
+    <!-- Tag CRUD Strings -->
+    <string name="tDelete_dialog_title">Eliminar etiqueta</string>
+    <string name="tDelete_dialog_msg">¿Desea eliminar esta etiqueta?</string>
+    <string name="tEdit_dialog_title">Editar etiqueta</string>
+    <string name="tChoose_dialog_title">Elegir etiqueta</string>
+    <string name="tagName">Etiquetas: </string>
+
+    <!-- Content CRUD strings -->
+    <string name="cDelete_dialog_title">Eliminar contenido</string>
+    <string name="cDelete_dialog_msg">¿Desea eliminar este contenido?</string>
+    <string name="nA">N/A</string>
+    <string name="link">Enlace</string>
+    <string name="slink">Enlace seguro</string>
+    <string name="tel">Número de télefono</string>
+    <string name="mail">Correo electrónico</string>
+    <string name="appLauncher">Lanzador de aplicación</string>
+    <string name="text">Texto</string>
+    <string name="smartPoster">Póster inteligente</string>
+    <string name="sign">Firma</string>
+    <string name="aar">Registro de Aplicación Android</string>
+    <string name="geoLoc">Ubicación geográfica</string>
+    <string name="plainText">Texto plano</string>
+    <string name="tag">Tag</string>
+    <string name="thesis">TEG</string>
+    <string name="report">Reporte de accidente</string>
+    <string name="sms">SMS</string>
+    <string name="uri">URI</string>
+    <string name="bussinesCard">Tarjeta de negocios</string>
+    <string name="payloadsType">Tipo del contenido:</string>
+    <string name="title_activity_read_teg">Leer TEG</string>
+    <string name="title_activity_generate_qrcode">GenerateQRCodeActivity</string>
+    <string name="title_activity_restore_data">Restaurar datos</string>
+    <string name="title_activity_restore_results">Resultado de la restauración</string>
+
+    <!-- About Dialog Strings -->
+    <string name="credits_author">Autor:</string>
+    <string name="creditIcons"> Iconos hechos por <a href="http://sebastien-gabriel.com" title="Sebastien Gabriel">Sebastien Gabriel</a></string>
+    <string name="credits_develop">Desarrollado a peticion de ALS TELECOM, C.A.</string>
+    <string name="credits_desc">Esta aplicación permite el intercambio de contenido entre el dispositivo y etiquetas NFC.</string>
+    <string name="credits_teg">Esta aplicación forma parte del Trabajo Especial de Grado para optar por el título de Licenciado en Computación otorgado por la Universidad Central de Venezuela.</string>
+    <string name="credit_icons">Iconos:</string>
+
+    <!-- Backup Data strings -->
+    <string name="title_activity_backup_data">Respaldar datos</string>
+    <string name="bu_title">El siguiente código QR contiene todo el contenido almacenado en texto plano.</string>
+    <string name="bu_title2">Este contenido:</string>
+    <string name="bu_title3">ha sido codificado en el siguiente código QR.</string>
+    <string name="bu_dialogTitle">Compartir como</string>
+    <string name="bu_savePath">Imagen guardada en: \u00A0</string>
+    <string name="bu_shareChooser">Compartir imagen</string>
+    <string name="bu_at">Como texto</string>
+    <string name="bu_ai">Como imagen</string>
+
+    <!-- Read TEG strings -->
+    <string name="rt_title">Título del Trabajo Especial de Grado</string>
+    <string name="rt_author">Autor</string>
+    <string name="rt_tutor">Tutor</string>
+    <string name="rt_school">Escuela</string>
+    <string name="rt_year">Año</string>
+    <string name="rt_url">Para mas detalles visite:</string>
+
+    <!-- Restore Data -->
+    <string name="rd_photoTitle">Tome una foto de un código QR generado por esta aplicación</string>
+    <string name="rd_imageTitle">Abra una imagen de un código QR generado por esta aplicación</string>
+    <string name="rd_photoOr">ó</string>
+    <string name="rd_takeButton">Tomar una foto</string>
+    <string name="rd_openButton">Abrir una imagen</string>
+
+    <!-- Restore results -->
+    <string name="rr_title">El contenido almacenado en el código QR es:</string>
+    <string name="rr_titleB">El contenido almacenado en el código QR no ha sido generado por esta aplicación.</string>
+
+    <!-- Transfer content strings -->
+    <string name="tc_ro">Etiqueta de sólo lectura</string>
+    <string name="tc_ok">Mensaje escrito en la etiqueta</string>
+    <string name="tc_ff">Error al formatear etiqueta</string>
+    <string name="tc_ndef">NDEF no soportado</string>
+    <string name="tc_wrong">Operación de escritura fallida</string>
+    <string name="tc_oom">No se pudo escribir el mensaje en la etiqueta. La capacidad de la etiqueta es %1$d bytes y el mensaje ocupa %2$d bytes.</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <!-- Accident assistance strings-->
+    <string name="title_activity_accident_assistance">Asistencia de accidente</string>
+    <string name="aa_header">Presione el botón para iniciar el proceso de asistencia.</string>
+    <string name="aa_dataHeader">Datos del asegurado</string>
+    <string name="aa_footer">Cuando el proceso de asistencia haya finalizado, presione el botón nuevamente para actualizar el estado de la incidencia.</string>
+    <string name="aa_OFFbutton">Iniciar asistencia</string>
+    <string name="aa_ONbutton">Finalizar asistencia</string>
+    <string name="aa_finished">El proceso de asistencia a finalizado.La incidencia ha sido reportada como atendida.</string>
+</resources>

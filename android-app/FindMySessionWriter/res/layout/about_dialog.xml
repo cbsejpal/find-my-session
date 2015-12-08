@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:background="@android:color/white"
+    >
+	
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:gravity="center_horizontal"
+	android:layout_margin="5dp"
+	android:background="@android:color/white"
+    >
+    
+    
+    <TextView 
+        android:id="@+id/creditTitle"
+        android:text="@string/app_name"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold" 
+        />
+    
+     <TextView
+         android:id="@+id/creditLAuthor"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
+         android:text="@string/credits_author"
+         android:textSize="16sp"
+         android:textStyle="bold" />
+    
+    <TextView 
+        android:id="@+id/creditAuthor"
+        android:text="Rafael Alejandro Machado Morales"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="14sp"
+        />
+    
+    
+        <TextView
+         android:id="@+id/creditDescrip"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
+         android:gravity="top|center"
+          android:textSize="14sp"
+         android:text="@string/credits_desc" />
+    
+    
+    
+    <TextView
+         android:id="@+id/creditDescripALS"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
+         android:gravity="top|center"
+          android:textSize="14sp"
+         android:text="@string/credits_develop" />
+
+    <ImageView
+        android:id="@+id/logoALS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:src="@drawable/logo_als" />
+    
+     <TextView
+         android:id="@+id/creditDescripTEG"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
+         android:gravity="top|center"
+          android:textSize="14sp"
+         android:text="@string/credits_teg" />
+
+     
+     <TextView
+         android:id="@+id/creditLIcons"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
+         android:text="@string/credit_icons"
+         android:textSize="16sp"
+         android:textStyle="bold" />
+    
+    <TextView 
+        android:id="@+id/credIcons"
+         android:textSize="14sp"
+        android:text="@string/creditIcons"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        />
+
+
+
+</LinearLayout>
+    
+</ScrollView>

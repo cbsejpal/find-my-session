@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/labelReceiver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fieldReceiver"
+        android:layout_marginTop="18dp"
+        android:text="@string/receiverLabel" />
+
+    <EditText
+        android:id="@+id/fieldReceiver"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labelReceiver"
+        android:layout_marginTop="18dp"
+        android:layout_margin="15dp"
+        android:ems="10"
+        android:hint="@string/receiverHint"
+        android:inputType="phone" >
+
+        <requestFocus />
+    </EditText>
+    
+     <Button
+        android:id="@+id/contactButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_toRightOf="@+id/fieldReceiver"
+        android:layout_alignBottom="@+id/fieldReceiver"
+        android:background="@drawable/contacts32"
+        android:onClick="onClick"
+         />
+    
+    <TextView
+        android:id="@+id/labelMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fieldMessage"
+        android:layout_below="@+id/fieldReceiver"
+        android:layout_marginTop="18dp"
+        android:text="@string/messageLabel" />
+
+    <EditText
+        android:id="@+id/fieldMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labelMessage"
+        android:layout_marginTop="18dp"
+        android:layout_margin="15dp"
+        android:ems="10"
+        android:hint="@string/messageHint"
+        android:inputType="text" >
+
+        <requestFocus />
+    </EditText>
+    
+    
+
+</RelativeLayout>

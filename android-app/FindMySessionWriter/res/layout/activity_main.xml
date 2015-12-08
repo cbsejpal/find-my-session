@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="com.example.project.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <Button
+        android:id="@+id/read"
+        style="@style/button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button"
+        android:drawableLeft="@drawable/search71"
+        android:drawablePadding="10dp"
+        android:gravity="left|center_vertical"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:text="@string/read" />
+
+    <Button
+        android:id="@+id/write"
+        style="@style/button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/button"
+        android:drawableLeft="@drawable/pencil79"
+        android:drawablePadding="10dp"
+        android:gravity="left|center_vertical"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:text="@string/write" />
+
+    <Button
+        android:id="@+id/my_tag"
+        style="@style/button"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/button"
+        android:drawableLeft="@drawable/folder162"
+        android:drawablePadding="10dp"
+        android:gravity="left|center_vertical"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:text="@string/my_tags" />
+
+    <Button
+        android:id="@+id/extras"
+        style="@style/button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/button"
+        android:drawableLeft="@drawable/add131"
+        android:drawablePadding="10dp"
+        android:gravity="left|center_vertical"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:text="@string/extras" />
+
+</LinearLayout>

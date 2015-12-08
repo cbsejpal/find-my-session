@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <TextView
+        android:id="@+id/labelLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fieldLatitude"
+        android:layout_marginTop="18dp"
+        android:text="@string/latitudeLabel" />
+
+    <EditText
+        android:id="@+id/fieldLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labelLatitude"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="@string/latitudeHint"
+        android:layout_margin="15dp"
+         />
+   
+    <TextView
+        android:id="@+id/labelLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fieldLongitude"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/fieldLatitude"
+        android:text="@string/longitudeLabel" />
+
+    <EditText
+        android:id="@+id/fieldLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labelLongitude"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="@string/longitudeHint"
+        android:layout_margin="15dp"
+         />
+
+    <Button
+        android:id="@+id/locationButton"
+        style="@style/buttonSSS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fieldLongitude"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:text="@string/locationButton" />
+    
+</RelativeLayout>

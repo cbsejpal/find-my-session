@@ -1,0 +1,140 @@
+<ScrollView 
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:background="#FFF"
+    >    
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="171dp"
+        android:background="#FFF"
+        tools:context="com.example.project.ReadMain"
+        tools:ignore="MergeRootFrame" >
+
+    <ImageView
+        android:id="@+id/payloadTypeIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="31dp"
+        android:visibility="visible"
+        android:contentDescription="@string/cntnt_desc_tagicon"
+        />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/payloadTypeIcon"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="10dp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        android:textSize="16sp"
+         />
+    
+      <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/payloadTypeIcon"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="70dp"
+        android:paddingLeft="10dp"
+        android:text="Content"
+        android:visibility="invisible"
+        android:textSize="14sp"
+         />
+
+    <Button
+        android:id="@+id/launchButton"
+        style="@style/buttonSS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/content"
+        android:layout_alignParentBottom="false"
+        android:layout_marginLeft="12dp"
+        android:layout_below="@+id/content"
+        android:text="@string/launchButton"
+        android:visibility="invisible" 
+        android:layout_marginTop="15dp"
+        android:onClick="onClick"
+        />
+
+    <Button
+        android:id="@+id/saveButton"
+        style="@style/buttonS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_marginLeft="35dp"
+        android:layout_below="@+id/content"
+        android:layout_toRightOf="@+id/launchButton"
+        android:text="@string/saveButton"
+        android:visibility="invisible"
+        android:layout_marginTop="15dp"
+        android:onClick="onClick"
+         />
+  
+    <TextView 
+        android:id="@+id/featuresText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/saveButton"
+        android:paddingLeft="10dp"
+        android:text="@string/title_feature_list"
+        android:visibility="invisible"
+        android:layout_marginTop="15dp"
+        android:textSize="16sp"
+      	android:layout_centerHorizontal="true"
+      	android:textStyle="bold"
+        />
+    
+    <LinearLayout 
+	    android:id="@+id/featureList"
+	    android:orientation="vertical"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/featuresText"
+	    android:layout_marginTop="15dp"
+	    android:background="#FFF"
+     >
+    
+	</LinearLayout>
+    
+    <TextView 
+        android:id="@+id/recordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/featureList"
+        android:paddingLeft="10dp"
+        android:visibility="invisible"
+        android:layout_marginTop="15dp"
+        android:textSize="16sp"
+      	android:layout_centerHorizontal="true"
+      	android:text="@string/title_record_list"
+      	android:textStyle="bold"
+        />
+    
+    <LinearLayout 
+	    android:id="@+id/recordsList"
+	    android:orientation="vertical"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/recordText"
+	    android:layout_marginTop="15dp"
+	    android:background="#FFF"
+     >
+    
+	</LinearLayout>
+    
+</RelativeLayout>
+
+</ScrollView>
+
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:id="@+id/fieldPhone"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="47dp"
+        android:ems="10"
+        android:hint="@string/phoneHint"
+        android:inputType="phone" 
+        android:layout_below="@+id/labelPhone"
+        />
+
+    <TextView
+        android:id="@+id/labelPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fieldPhone"
+        android:layout_marginTop="18dp"
+        android:text="@string/phoneLabel" />
+
+    <Button
+        android:id="@+id/contactButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignBottom="@+id/fieldPhone"
+        android:layout_toRightOf="@+id/fieldPhone"
+        android:background="@drawable/contacts32"
+        android:onClick="onClick" />
+    
+</RelativeLayout>

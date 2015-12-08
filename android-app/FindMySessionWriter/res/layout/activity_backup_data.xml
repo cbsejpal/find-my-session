@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+     >
+
+    <TextView
+        android:id="@+id/backupQRT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="@string/bu_title2"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+         />
+
+   <include
+        android:id="@+id/savedQRContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        layout="@layout/recent_content"
+        android:background="#469" 
+        android:visibility="gone"
+        />
+    
+    <TextView
+        android:id="@+id/backupQRST"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="@string/bu_title"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/backupQRImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" 
+        android:layout_marginBottom="15dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:paddingLeft="55dp"
+        android:paddingRight="55dp"
+         >
+
+        <Button
+            android:id="@+id/backupSave"
+            style="@style/buttonS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/saveButton" />
+
+        <Button
+            android:id="@+id/backupShare"
+            style="@style/buttonSS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/share" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+    
+    
+</ScrollView>

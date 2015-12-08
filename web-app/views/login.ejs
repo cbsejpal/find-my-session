@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Login Form</title>
+            <style>
+   body  {
+    background-image: url("img/backgrounds/1.jpg");
+    background-color: #cccccc;
+}
+
+</style>
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://code.angularjs.org/1.3.15/angular.js"></script>
+        <script src="angular/login.js"></script>
+    
+    	<link rel="stylesheet" href="stylesheets/form-elements.css">
+        <link rel="stylesheet" href="stylesheets/style.css">
+
+    
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    </head>
+
+   <body ng-app="login" ng-controller="login">
+
+        <!-- Top content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <h1 style="text-align:center"><strong>Please</strong> Login here</h1>
+                            <div class="description">
+                            	<p style="text-align:center">
+                            	Please login to use the service ! 
+                            	</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                        	<div class="form-top">
+                        		<div class="form-top-left">
+                        			<h3>Login !</h3>
+                            	
+                        		</div>
+                        		<div class="form-top-right">
+                        			<i class="fa fa-key"></i>
+                        		</div>
+                            </div>
+                            <div class="form-bottom">
+			                    <form name="form" name="registration" class="login-form">
+			                       <div class="form-group">
+			                       
+			                        	<input type="text" class="form-control" name="email" ng-model="email" placeholder="email"  id="email"  required>
+			                       
+						                  
+			                        </div>
+			                        
+			                        <div class="form-group">
+			                        
+			                        	<input type="password" class="form-control" ng-model="password" name="password" placeholder="password"  id="password" required>
+			                         
+			                        
+			                        </div>
+			                                
+			                        <button type="submit" ng-click="submit()" class="btn">Login</button>
+							       
+							        <div class="alert alert-danger" ng-hide="invalid_login">
+										<strong>Incorrect username or password</strong>
+									</div>
+									<div class="alert alert-danger" ng-hide="unexpected_error">
+										<strong>Unexpected error, try again</strong>
+									
+									</div>
+				            </form>
+		                    </div>
+                        </div>
+                    </div>
+                 
+                </div>
+            </div>
+            
+        </div>
+
+
+        <!-- Javascript -->
+ 
+       
+    </body>
+
+</html>

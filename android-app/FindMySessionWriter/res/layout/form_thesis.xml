@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/labelTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fieldTitle"
+        android:layout_marginTop="15dp"
+        android:text="@string/ct_title" />
+
+    <EditText
+        android:id="@+id/fieldTitle"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/labelTitle"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:gravity="left|top"
+        android:hint="@string/ct_titleH"
+        android:inputType="textCapSentences|textMultiLine"
+        android:scrollHorizontally="false"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/labelAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fieldAuthor"
+        android:layout_below="@+id/fieldTitle"
+        android:layout_marginTop="15dp"
+        android:text="@string/ct_author" />
+
+    <EditText
+        android:id="@+id/fieldAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/fieldRef"
+        android:layout_below="@+id/labelAuthor"
+        android:layout_margin="10dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="@string/ct_authorH"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/labelTutor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fieldAuthor"
+        android:layout_below="@+id/fieldAuthor"
+        android:layout_marginTop="15dp"
+        android:text="@string/ct_tutor" />
+
+    <EditText
+        android:id="@+id/fieldTutor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/fieldRef"
+        android:layout_below="@+id/labelTutor"
+        android:layout_margin="10dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="@string/ct_tutorH"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/labelRef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fieldRef"
+        android:layout_below="@+id/fieldTutor"
+        android:text="@string/ct_school" />
+
+    <EditText
+        android:id="@+id/fieldRef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labelRef"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="@string/ct_schoolH"
+        android:inputType="text" />
+    
+    
+     <TextView
+        android:id="@+id/labelYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fieldRef"
+        android:layout_below="@+id/fieldRef"
+        android:text="@string/ct_year" />
+
+    <EditText
+        android:id="@+id/fieldYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labelYear"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="@string/ct_yearH"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/labelURL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fieldRef"
+        android:layout_below="@+id/fieldYear"
+        android:layout_marginBottom="20dp"
+        android:text="@string/ct_url" />
+
+    <EditText
+        android:id="@+id/fieldURL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/labelURL"
+        android:layout_below="@+id/labelURL"
+        android:ems="10"
+        android:hint="@string/ct_urlH"
+        android:inputType="textUri" >
+
+        <requestFocus />
+    </EditText>
+
+    <CheckBox
+        android:id="@+id/shortUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/fieldURL"
+        android:layout_toRightOf="@+id/fieldURL"
+        android:enabled="false"
+        android:text="@string/ct_Surl" />
+
+</RelativeLayout>
